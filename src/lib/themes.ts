@@ -1,5 +1,5 @@
 import { ThemeConfig, ThemeProperties } from "@/types/theme";
-import { basePresetsV4 } from "./colors";
+import { otherPresets } from "./presets";
 
 export function getCssVarsFromThemeObject(
   themeProperties: Partial<ThemeProperties>,
@@ -41,18 +41,18 @@ export const initialThemeConfig: ThemeConfig = {
   radius: DEFAULT_RADIUS,
   surface: DEFAULT_SURFACE,
   fonts: {
-    sans: basePresetsV4.neutral.fonts?.sans || DEFAULT_FONTS["font-sans"],
-    serif: basePresetsV4.neutral.fonts?.serif || DEFAULT_FONTS["font-serif"],
-    mono: basePresetsV4.neutral.fonts?.mono || DEFAULT_FONTS["font-mono"],
+    sans: otherPresets.dx.fonts?.sans || DEFAULT_FONTS["font-sans"],
+    serif: otherPresets.dx.fonts?.serif || DEFAULT_FONTS["font-serif"],
+    mono: otherPresets.dx.fonts?.mono || DEFAULT_FONTS["font-mono"],
   },
   themeObject: {
-    ...basePresetsV4.neutral,
+    ...otherPresets.dx,
     light: {
-      ...basePresetsV4.neutral.light,
+      ...otherPresets.dx.light,
       ...DEFAULT_SHADOWS,
     },
     dark: {
-      ...basePresetsV4.neutral.dark,
+      ...otherPresets.dx.dark,
       "shadow-color": DEFAULT_SHADOWS["shadow-color"],
     },
   },
