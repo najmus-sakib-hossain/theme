@@ -1,4 +1,4 @@
-export type ThemeMode = "light" | "dark";
+export type ThemeMode = "clear" | "tinted";
 
 export type ColorFormat = "hex" | "rgb" | "hsl" | "oklch";
 
@@ -130,10 +130,10 @@ export type ThemeObject = {
   label: string;
   radius?: string;
   fonts?: Fonts;
-  light: Partial<ThemeProperties>;
-  dark: Partial<ThemeProperties>;
-  tinted?: Partial<ThemeProperties>;
-  clear?: Partial<ThemeProperties>;
+  clear: Partial<ThemeProperties>;
+  tinted: Partial<ThemeProperties>;
+  light?: Partial<ThemeProperties>;
+  dark?: Partial<ThemeProperties>;
 };
 
 export type ThemeConfig = {
@@ -153,8 +153,8 @@ export type SurfaceShadesPreset =
 export type SurfaceShadesThemeObject = {
   name: SurfaceShadesPreset;
   label: string;
-  light: SurfaceShades;
-  dark: SurfaceShades;
+  clear: SurfaceShades;
+  tinted: SurfaceShades;
 };
 
 export type SurfaceShades = {

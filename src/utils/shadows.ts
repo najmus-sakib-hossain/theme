@@ -14,10 +14,10 @@ export function getShadowProperty(
   mode: ThemeMode,
 ) {
   return (
-    themeObject[mode][property] ||
-    themeObject.light[property] ||
-    initialThemeConfig.themeObject[mode][property] ||
-    initialThemeConfig.themeObject.light[property]
+    themeObject[mode]?.[property] ||
+    themeObject.clear?.[property] ||
+    initialThemeConfig.themeObject[mode]?.[property] ||
+    initialThemeConfig.themeObject.clear?.[property]
   );
 }
 

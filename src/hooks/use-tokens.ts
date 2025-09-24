@@ -15,7 +15,7 @@ import { useThemeConfig } from "./use-theme-config";
 
 export function useTokens() {
   const { resolvedTheme } = useTheme();
-  const mode: ThemeMode = resolvedTheme === "dark" ? "dark" : "light";
+  const mode: ThemeMode = resolvedTheme === "tinted" ? "tinted" : "clear";
   const { config, setConfig, currentThemeObject } = useThemeConfig();
 
   const getToken = useCallback(
@@ -26,7 +26,7 @@ export function useTokens() {
       let resolvedMode = mode;
 
       if (isShadow) {
-        resolvedMode = "light";
+        resolvedMode = "clear";
         if (isShadowColor) resolvedMode = mode;
       }
 
@@ -59,12 +59,12 @@ export function useTokens() {
           ...prev,
           themeObject: {
             ...prev.themeObject,
-            light: {
-              ...prev.themeObject.light,
+            clear: {
+              ...prev.themeObject.clear,
               [property]: value,
             },
-            dark: {
-              ...prev.themeObject.dark,
+            tinted: {
+              ...prev.themeObject.tinted,
               [property]: value,
             },
           },
@@ -164,12 +164,12 @@ export function useTokens() {
           ...prev,
           themeObject: {
             ...prev.themeObject,
-            light: {
-              ...prev.themeObject.light,
+            clear: {
+              ...prev.themeObject.clear,
               [property]: color,
             },
-            dark: {
-              ...prev.themeObject.dark,
+            tinted: {
+              ...prev.themeObject.tinted,
               [property]: color,
             },
           },
@@ -217,13 +217,13 @@ export function useTokens() {
           ...prev,
           themeObject: {
             ...prev.themeObject,
-            light: {
-              ...prev.themeObject.light,
+            clear: {
+              ...prev.themeObject.clear,
               [property]: bgColor,
               [propertyForeground]: optimalFgColor,
             },
-            dark: {
-              ...prev.themeObject.dark,
+            tinted: {
+              ...prev.themeObject.tinted,
               [property]: bgColor,
               [propertyForeground]: optimalFgColor,
             },
@@ -271,8 +271,8 @@ export function useTokens() {
           ...prev,
           themeObject: {
             ...prev.themeObject,
-            light: {
-              ...prev.themeObject.light,
+            clear: {
+              ...prev.themeObject.clear,
               primary: color,
               "primary-foreground": optimalFgColor,
               ring: color,
@@ -280,8 +280,8 @@ export function useTokens() {
               "sidebar-primary-foreground": optimalFgColor,
               "sidebar-ring": color,
             },
-            dark: {
-              ...prev.themeObject.dark,
+            tinted: {
+              ...prev.themeObject.tinted,
               primary: color,
               "primary-foreground": optimalFgColor,
               ring: color,
@@ -329,13 +329,13 @@ export function useTokens() {
           surface: bgShadesThemeObject.name,
           themeObject: {
             ...prev.themeObject,
-            light: {
-              ...prev.themeObject.light,
-              ...bgShadesThemeObject.light,
+            clear: {
+              ...prev.themeObject.clear,
+              ...bgShadesThemeObject.clear,
             },
-            dark: {
-              ...prev.themeObject.dark,
-              ...bgShadesThemeObject.dark,
+            tinted: {
+              ...prev.themeObject.tinted,
+              ...bgShadesThemeObject.tinted,
             },
           },
         };

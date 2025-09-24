@@ -36,18 +36,18 @@ function convertToRegistryColor(
   return colorFormatter(color, colorFormat, tailwindVersion);
 }
 
-// Helper to get a value from either dark or light theme
+// Helper to get a value from either tinted or clear theme
 function getThemeValue(
-  dark: ThemeProperties,
-  light: ThemeProperties,
+  tinted: ThemeProperties,
+  clear: ThemeProperties,
   key: keyof ThemeProperties,
 ): string {
-  return dark[key] || light[key] || "";
+  return tinted[key] || clear[key] || "";
 }
 
 // Convert theme styles to registry format
 function convertThemeStyles(themeObject: ThemeObject) {
-  const { light, dark } = themeObject;
+  const { clear, tinted } = themeObject;
   const convertColor = (color?: string) => convertToRegistryColor(color!);
 
   const convertBaseThemeProps = (theme: ThemeProperties): ThemeProperties => {
@@ -99,24 +99,24 @@ function convertThemeStyles(themeObject: ThemeObject) {
   };
 
   return {
-    light: {
-      ...initialThemeConfig.themeObject.light,
+    clear: {
+      ...initialThemeConfig.themeObject.clear,
       ...{
         "font-sans": themeObject.fonts?.sans || FALLBACKS["font-sans"],
         "font-serif": themeObject.fonts?.serif || FALLBACKS["font-serif"],
         "font-mono": themeObject.fonts?.mono || FALLBACKS["font-mono"],
       },
-      ...convertBaseThemeProps(light as ThemeProperties),
+      ...convertBaseThemeProps(clear as ThemeProperties),
       radius: themeObject.radius || FALLBACKS.radius,
       "shadow-color": convertColor(
-        light["shadow-color"] ?? FALLBACKS["shadow-color"],
+        clear["shadow-color"] ?? FALLBACKS["shadow-color"],
       ),
     } satisfies ThemeProperties,
-    dark: {
-      ...initialThemeConfig.themeObject.dark,
-      ...convertBaseThemeProps(dark as ThemeProperties),
+    tinted: {
+      ...initialThemeConfig.themeObject.tinted,
+      ...convertBaseThemeProps(tinted as ThemeProperties),
       "shadow-color": convertColor(
-        dark["shadow-color"] ?? FALLBACKS["shadow-color"],
+        tinted["shadow-color"] ?? FALLBACKS["shadow-color"],
       ),
     } satisfies ThemeProperties,
   };
@@ -125,10 +125,10 @@ function convertThemeStyles(themeObject: ThemeObject) {
 // TODO: Adjust the right (and only the necessary) variables
 // Maybe pass the object to Zod and let it do the work?
 export function buildThemeRegistryItem(themeObject: ThemeObject) {
-  const { light, dark } = convertThemeStyles(themeObject);
+  const { clear, tinted } = convertThemeStyles(themeObject);
 
-  // Generate shadow variables for both light and dark modes
-  const lightShadows = getShadowMap(themeObject, "light", { varOutput: true });
+  // Generate shadow variables for both clear and tinted modes
+  const clearShadows = getShadowMap(themeObject, "clear", { varOutput: true });
 
   const registryItem = {
     $schema: "https://ui.shadcn.com/schema/registry-item.json",
@@ -145,23 +145,23 @@ export function buildThemeRegistryItem(themeObject: ThemeObject) {
         "tracking-wider": "calc(var(--tracking-normal) + 0.05em)",
         "tracking-widest": "calc(var(--tracking-normal) + 0.1em)",
       },
-      light: {
-        ...cleanUpLightModeStyles(light),
-        "shadow-2xs": lightShadows["shadow-2xs"],
-        "shadow-xs": lightShadows["shadow-xs"],
-        "shadow-sm": lightShadows["shadow-sm"],
-        shadow: lightShadows["shadow"],
-        "shadow-md": lightShadows["shadow-md"],
-        "shadow-lg": lightShadows["shadow-lg"],
-        "shadow-xl": lightShadows["shadow-xl"],
-        "shadow-2xl": lightShadows["shadow-2xl"],
-        spacing: getThemeValue(dark, light, "spacing") || FALLBACKS.spacing,
+      clear: {
+        ...cleanUpLightModeStyles(clear),
+        "shadow-2xs": clearShadows["shadow-2xs"],
+        "shadow-xs": clearShadows["shadow-xs"],
+        "shadow-sm": clearShadows["shadow-sm"],
+        shadow: clearShadows["shadow"],
+        "shadow-md": clearShadows["shadow-md"],
+        "shadow-lg": clearShadows["shadow-lg"],
+        "shadow-xl": clearShadows["shadow-xl"],
+        "shadow-2xl": clearShadows["shadow-2xl"],
+        spacing: getThemeValue(tinted, clear, "spacing") || FALLBACKS.spacing,
         "tracking-normal":
-          getThemeValue(dark, light, "letter-spacing") ||
+          getThemeValue(tinted, clear, "letter-spacing") ||
           FALLBACKS["letter-spacing"],
       },
-      dark: {
-        ...cleanUpDarkModeStyles(dark),
+      tinted: {
+        ...cleanUpDarkModeStyles(tinted),
       },
     },
   } satisfies RegistryItem;

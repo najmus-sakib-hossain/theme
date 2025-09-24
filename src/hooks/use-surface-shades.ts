@@ -174,8 +174,8 @@ export function useSurfaceShades() {
     const surfaceThemeObject: SurfaceShadesThemeObject = {
       name: "default",
       label: "Default",
-      light: lightDefaultSurfaceShades,
-      dark: darkDefaultSurfaceShades,
+      clear: lightDefaultSurfaceShades,
+      tinted: darkDefaultSurfaceShades,
     };
 
     return surfaceThemeObject;
@@ -349,8 +349,8 @@ export function useSurfaceShades() {
     const surfaceThemeObject: SurfaceShadesThemeObject = {
       name: "inverted",
       label: "Inverted",
-      light: lightInvertedSurfaceShades,
-      dark: darkInvertedSurfaceShades,
+      clear: lightInvertedSurfaceShades,
+      tinted: darkInvertedSurfaceShades,
     };
 
     return surfaceThemeObject;
@@ -522,8 +522,8 @@ export function useSurfaceShades() {
     const surfaceThemeObject: SurfaceShadesThemeObject = {
       name: "plain",
       label: "Plain",
-      light: lightPlainSurfaceShades,
-      dark: darkPlainSurfaceShades,
+      clear: lightPlainSurfaceShades,
+      tinted: darkPlainSurfaceShades,
     };
 
     return surfaceThemeObject;

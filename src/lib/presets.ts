@@ -11,7 +11,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "Geist Mono, monospace"
     },
-    light: {
+    clear: {
       background: "oklch(0.99 0 0)",
       foreground: "oklch(0 0 0)",
       card: "oklch(1.00 0 0)",
@@ -52,7 +52,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "1px"
     },
-    dark: {
+    tinted: {
       background: "oklch(0.13 0 0)",
       foreground: "oklch(1.00 0 0)",
       card: "oklch(0.14 0 0)",
@@ -185,7 +185,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "Geist Mono, monospace"
     },
-    light: {
+    clear: {
       background: "oklch(1 0 0)",
       foreground: "oklch(0 0 0)",
       card: "oklch(1.00 0 0)",
@@ -226,7 +226,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "1px"
     },
-    dark: {
+    tinted: {
       background: "oklch(0.13 0 0)",
       foreground: "oklch(1.00 0 0)",
       card: "oklch(0.14 0 0)",
@@ -271,7 +271,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: serifFonts["PT Serif"].value,
       mono: monoFonts["Geist Mono"].value,
     },
-    light: {
+    clear: {
       radius: "0.625rem",
       background: "oklch(.91 .048 83.6)",
       foreground: "oklch(.41 .077 78.9)",
@@ -313,7 +313,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "1px",
       "shadow-offset-y": "2px",
     },
-    dark: {
+    tinted: {
       background: "oklch(0.33 0.02 88.07)",
       foreground: "oklch(0.92 0.02 82.12)",
       card: "oklch(0.36 0.02 82.33)",
@@ -359,7 +359,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#fcfcfc",
       foreground: "#171717",
       card: "#fcfcfc",
@@ -401,7 +401,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-y": "1px",
       "letter-spacing": "0.025em"
     },
-    dark: {
+    tinted: {
       background: "#121212",
       foreground: "#e2e8f0",
       card: "#171717",
@@ -446,7 +446,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "Menlo, monospace"
     },
-    light: {
+    clear: {
       background: "#ffffff",
       foreground: "#0f1419",
       card: "#f7f8f8",
@@ -487,7 +487,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#000000",
       foreground: "#e7e9ea",
       card: "#17181c",
@@ -532,7 +532,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       sans: sansFonts.Figtree.value,
       mono: monoFonts["JetBrains Mono"].value,
     },
-    light: {
+    clear: {
       background: "hsl(300 56% 98%)", // --chat-backgound, actual --background = hsl(293.7 46.3% 92%)
       foreground: "hsl(296 56% 21%)",
       card: "hsl(291 54% 97%)",
@@ -567,7 +567,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-border": "hsl(304.8 61% 81.9%)",
       "sidebar-ring": "hsl(332.824 79.439% 41.961%)",
     },
-    dark: {
+    tinted: {
       background: "hsl(270 16.13% 12.16% )", // --chat-backgound, actual --background = hsl(313.8 24.5% 10.4%)
       foreground: "hsl(270 20% 97.8%)",
       card: "hsl(320 23.08% 5.1%)",
@@ -611,7 +611,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Courier New, monospace",
       mono: "Courier New, monospace"
     },
-    light: {
+    clear: {
       background: "#e8f0f0",
       foreground: "#0a4a55",
       card: "#f2f7f7",
@@ -652,7 +652,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "1px",
       "shadow-offset-y": "1px"
     },
-    dark: {
+    tinted: {
       background: "#0a1a20",
       foreground: "#4de8e8",
       card: "#0c2025",
@@ -703,7 +703,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: serifFonts.Adamina.value,
       mono: monoFonts["Fira Code"].value,
     },
-    light: {
+    clear: {
       background: "#faf9f5",
       foreground: "#3d3929",
       card: "#faf9f5",
@@ -738,7 +738,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-ring": "#fa6331",
       radius: "0.5rem",
     },
-    dark: {
+    tinted: {
       background: "#262624",
       foreground: "#c3c0b6",
       card: "#262624",
@@ -782,7 +782,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: serifFonts["IBM Plex Serif"].value,
       mono: monoFonts["JetBrains Mono"].value,
     },
-    light: {
+    clear: {
       background: "#e6e7ed",
       foreground: "#343b59",
       card: "#d6d8df",
@@ -826,7 +826,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "1px",
       "shadow-offset-y": "1px",
     },
-    dark: {
+    tinted: {
       background: "#1a1b26",
       foreground: "#c0caf5",
       card: "#24283b",
@@ -874,7 +874,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       sans: monoFonts["Geist Mono"].value,
       mono: monoFonts["Geist Mono"].value,
     },
-    light: {
+    clear: {
       radius: "0rem",
       background: "oklch(1 0 0)",
       foreground: "oklch(.145 0 0)",
@@ -909,7 +909,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-border": "oklch(.922 0 0)",
       "sidebar-ring": "oklch(.556 0 0)",
     },
-    dark: {
+    tinted: {
       background: "oklch(.145 0 0)",
       foreground: "oklch(.985 0 0)",
       card: "oklch(.205 0 0)",
@@ -953,7 +953,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: sansFonts["Space Grotesk"].value,
       mono: monoFonts["Space Mono"].value,
     },
-    light: {
+    clear: {
       radius: "0rem",
       background: "#e5e7eb", // Cool Gray 200
       foreground: "#111827", // Gray 900
@@ -995,7 +995,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "4px",
       "shadow-offset-y": "4px",
     },
-    dark: {
+    tinted: {
       background: "#18181b", // Zinc 900
       foreground: "#fafafa", // Zinc 50
       card: "#27272a", // Zinc 800
@@ -1041,7 +1041,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#ffffff",
       foreground: "#333333",
       card: "#ffffff",
@@ -1076,7 +1076,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-border": "#e5e7eb",
       "sidebar-ring": "#3b82f6"
     },
-    dark: {
+    tinted: {
       background: "#171717",
       foreground: "#e5e5e5",
       card: "#262626",
@@ -1121,7 +1121,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "Menlo, monospace"
     },
-    light: {
+    clear: {
       background: "#F1F0E5",
       foreground: "#56453F",
       card: "#F1F0E5",
@@ -1162,7 +1162,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "2px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#2d2521",
       foreground: "#F1F0E5",
       card: "#3c332e",
@@ -1208,7 +1208,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#cccccc",
       foreground: "#1f1f1f",
       card: "#b0b0b0",
@@ -1251,7 +1251,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "letter-spacing": "0em",
       spacing: "0.25rem"
     },
-    dark: {
+    tinted: {
       background: "#1a1a1a",
       foreground: "#e0e0e0",
       card: "#2a2a2a",
@@ -1304,7 +1304,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "Fira Code, monospace"
     },
-    light: {
+    clear: {
       background: "#eff1f5",
       foreground: "#4c4f69",
       card: "#ffffff",
@@ -1345,7 +1345,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "4px"
     },
-    dark: {
+    tinted: {
       background: "#181825",
       foreground: "#cdd6f4",
       card: "#1e1e2e",
@@ -1390,7 +1390,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "Fira Code, monospace"
     },
-    light: {
+    clear: {
       background: "#f0f0f0",
       foreground: "#333333",
       card: "#f5f5f5",
@@ -1431,7 +1431,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#1a1a1a",
       foreground: "#d9d9d9",
       card: "#202020",
@@ -1476,7 +1476,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#e4d7b0",
       foreground: "#5c4b3e",
       card: "#e7dbbf",
@@ -1517,7 +1517,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "3px",
       "shadow-offset-y": "3px"
     },
-    dark: {
+    tinted: {
       background: "#3a3529",
       foreground: "#ede4d4",
       card: "#413c33",
@@ -1562,7 +1562,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Georgia, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f5f5ff",
       foreground: "#2a2a4a",
       card: "#ffffff",
@@ -1603,7 +1603,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "4px"
     },
-    dark: {
+    tinted: {
       background: "#0f0f1a",
       foreground: "#e2e2f5",
       card: "#1a1a2e",
@@ -1648,7 +1648,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#e8ebed",
       foreground: "#333333",
       card: "#ffffff",
@@ -1689,7 +1689,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "1px"
     },
-    dark: {
+    tinted: {
       background: "#1c2433",
       foreground: "#e5e5e5",
       card: "#2a3040",
@@ -1734,7 +1734,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Playfair Display, serif",
       mono: "Space Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#fff0f8",
       foreground: "#91185c",
       card: "#fff7fc",
@@ -1775,7 +1775,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "3px"
     },
-    dark: {
+    tinted: {
       background: "#1a0922",
       foreground: "#ffb3ff",
       card: "#2a1435",
@@ -1821,7 +1821,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Merriweather, serif",
       mono: "Source Code Pro, monospace"
     },
-    light: {
+    clear: {
       background: "#f8f5f0",
       foreground: "#3e2723",
       card: "#f8f5f0",
@@ -1856,7 +1856,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-border": "#e0d6c9",
       "sidebar-ring": "#2e7d32"
     },
-    dark: {
+    tinted: {
       background: "#1c2a1f",
       foreground: "#f0ebe5",
       card: "#2d3a2e",
@@ -1901,7 +1901,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Playfair Display, serif",
       mono: "Fira Code, monospace"
     },
-    light: {
+    clear: {
       background: "#ffffff",
       foreground: "#312e81",
       card: "#ffffff",
@@ -1942,7 +1942,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "2px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#0f172a",
       foreground: "#e0e7ff",
       card: "#1e1b4b",
@@ -1987,7 +1987,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Libre Baskerville, serif",
       mono: "IBM Plex Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#faf7f5",
       foreground: "#1a1a1a",
       card: "#faf7f5",
@@ -2028,7 +2028,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "1px",
       "shadow-offset-y": "1px"
     },
-    dark: {
+    tinted: {
       background: "#1c1917",
       foreground: "#f5f5f4",
       card: "#292524",
@@ -2073,7 +2073,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#ffffff",
       foreground: "#262626",
       card: "#ffffff",
@@ -2116,7 +2116,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "letter-spacing": "0em",
       spacing: "0.25rem"
     },
-    dark: {
+    tinted: {
       background: "#171717",
       foreground: "#e5e5e5",
       card: "#262626",
@@ -2161,7 +2161,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "Space Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#ffffff",
       foreground: "#000000",
       card: "#ffffff",
@@ -2202,7 +2202,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "4px",
       "shadow-offset-y": "4px"
     },
-    dark: {
+    tinted: {
       background: "#000000",
       foreground: "#ffffff",
       card: "#333333",
@@ -2247,7 +2247,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Merriweather, serif",
       mono: "Fira Code, monospace"
     },
-    light: {
+    clear: {
       background: "#FDFBF7",
       foreground: "#4A3B33",
       card: "#F8F4EE",
@@ -2288,7 +2288,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#1C1917",
       foreground: "#F5F5F4",
       card: "#292524",
@@ -2334,7 +2334,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Lora, serif",
       mono: "Roboto Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#e7e5e4",
       foreground: "#1e293b",
       card: "#f5f5f4",
@@ -2375,7 +2375,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "2px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#1e1b18",
       foreground: "#e2e8f0",
       card: "#2c2825",
@@ -2421,7 +2421,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "Fira Code, monospace"
     },
-    light: {
+    clear: {
       background: "#f8f9fa",
       foreground: "#0c0c1d",
       card: "#ffffff",
@@ -2462,7 +2462,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "4px"
     },
-    dark: {
+    tinted: {
       background: "#0c0c1d",
       foreground: "#eceff4",
       card: "#1e1e3f",
@@ -2507,7 +2507,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "IBM Plex Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f7f3f9",
       foreground: "#374151",
       card: "#ffffff",
@@ -2548,7 +2548,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "8px"
     },
-    dark: {
+    tinted: {
       background: "#1c1917",
       foreground: "#e0e7ff",
       card: "#2d2535",
@@ -2593,7 +2593,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Merriweather, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f8fafc",
       foreground: "#1e293b",
       card: "#ffffff",
@@ -2634,7 +2634,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "4px"
     },
-    dark: {
+    tinted: {
       background: "#0f172a",
       foreground: "#e2e8f0",
       card: "#1e293b",
@@ -2679,7 +2679,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f9f9f9",
       foreground: "#202020",
       card: "#fcfcfc",
@@ -2714,7 +2714,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-ring": "#b5b5b5",
       radius: "0.5rem"
     },
-    dark: {
+    tinted: {
       background: "#111111",
       foreground: "#eeeeee",
       card: "#191919",
@@ -2759,7 +2759,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Lora, serif",
       mono: "IBM Plex Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f0f8ff",
       foreground: "#374151",
       card: "#ffffff",
@@ -2800,7 +2800,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "4px"
     },
-    dark: {
+    tinted: {
       background: "#0f172a",
       foreground: "#d1d5db",
       card: "#1e293b",
@@ -2845,7 +2845,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "Space Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#fdf6e3",
       foreground: "#073642",
       card: "#eee8d5",
@@ -2886,7 +2886,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "2px",
       "shadow-offset-y": "2px"
     },
-    dark: {
+    tinted: {
       background: "#002b36",
       foreground: "#93a1a1",
       card: "#073642",
@@ -2931,7 +2931,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Playfair Display, serif",
       mono: "Source Code Pro, monospace"
     },
-    light: {
+    clear: {
       background: "#f9f9f9",
       foreground: "#333333",
       card: "#ffffff",
@@ -2972,7 +2972,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "5px"
     },
-    dark: {
+    tinted: {
       background: "#1a1d23",
       foreground: "#e5e5e5",
       card: "#2f3436",
@@ -3017,7 +3017,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "Roboto Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f7f9fa",
       foreground: "#333333",
       card: "#ffffff",
@@ -3052,7 +3052,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-border": "#d4d4d4",
       "sidebar-ring": "#ffc0cb"
     },
-    dark: {
+    tinted: {
       background: "#1a1d23",
       foreground: "#e5e5e5",
       card: "#2f3436",
@@ -3097,7 +3097,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f9f9fa",
       foreground: "#333333",
       card: "#ffffff",
@@ -3132,7 +3132,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-border": "#d4d4d4",
       "sidebar-ring": "#34a85a"
     },
-    dark: {
+    tinted: {
       background: "#1a1d23",
       foreground: "#e5e5e5",
       card: "#2f3436",
@@ -3177,7 +3177,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Lora, serif",
       mono: "IBM Plex Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f5f1e6",
       foreground: "#4a3f35",
       card: "#fffcf5",
@@ -3218,7 +3218,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "2px",
       "shadow-offset-y": "3px"
     },
-    dark: {
+    tinted: {
       background: "#2d2621",
       foreground: "#ece5d8",
       card: "#3a322c",
@@ -3263,7 +3263,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Merriweather, serif",
       mono: "Ubuntu Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#fff9f5",
       foreground: "#3d3436",
       card: "#ffffff",
@@ -3304,7 +3304,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "0px",
       "shadow-offset-y": "6px"
     },
-    dark: {
+    tinted: {
       background: "#2a2024",
       foreground: "#f2e9e4",
       card: "#392f35",
@@ -3349,7 +3349,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: "Source Serif 4, serif",
       mono: "JetBrains Mono, monospace"
     },
-    light: {
+    clear: {
       background: "#f5f7fa",
       foreground: "#1a2238",
       card: "#e3eaf2",
@@ -3384,7 +3384,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "sidebar-ring": "#f7c873",
       radius: "0.5rem"
     },
-    dark: {
+    tinted: {
       background: "#181a24",
       foreground: "#e6eaf3",
       card: "#23243a",
@@ -3429,7 +3429,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: '"Times New Roman", Times, serif',
       mono: '"Courier New", Courier, monospace'
     },
-    light: {
+    clear: {
       background: "#f9f9f9",
       foreground: "#3a3a3a",
       card: "#ffffff",
@@ -3471,7 +3471,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "letter-spacing": "0.5px",
       spacing: "0.25rem"
     },
-    dark: {
+    tinted: {
       background: "#2b2b2b",
       foreground: "#dcdcdc",
       card: "#333333",
@@ -3523,7 +3523,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: '"Lora", Georgia, serif',
       mono: '"Fira Code", "Courier New", monospace'
     },
-    light: {
+    clear: {
       background: "#f8f7fa",
       foreground: "#3d3c4f",
       card: "#ffffff",
@@ -3565,7 +3565,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "letter-spacing": "0em",
       spacing: "0.25rem"
     },
-    dark: {
+    tinted: {
       background: "#1a1823",
       foreground: "#e0ddef",
       card: "#232030",
@@ -3609,7 +3609,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       serif: serifFonts.Lora.value,
       mono: monoFonts["Fira Code"].value,
     },
-    light: {
+    clear: {
       background: "#f6e6ee",
       foreground: "#5b5b5b",
       card: "#fdedc9",
@@ -3653,7 +3653,7 @@ export const otherPresets: Record<OtherPresets, ThemeObject> = {
       "shadow-offset-x": "3px",
       "shadow-offset-y": "3px",
     },
-    dark: {
+    tinted: {
       background: "#12242e",
       foreground: "#f3e3ea",
       card: "#1c2e38",

@@ -12,12 +12,12 @@ export function LoadTheme() {
   const loadThemeScriptContent = `(function() {
     const root = document.documentElement;
 
-    const defaultLightStyles = ${JSON.stringify(
-      initialThemeConfig.themeObject.light,
-    )};
-    const defaultDarkStyles = ${JSON.stringify(
-      initialThemeConfig.themeObject.dark,
-    )};
+    const defaultClearStyles = ${JSON.stringify(
+    initialThemeConfig.themeObject.clear,
+  )};
+    const defaultTintedStyles = ${JSON.stringify(
+    initialThemeConfig.themeObject.tinted,
+  )};
     const defaultRadius = ${JSON.stringify(initialThemeConfig.radius)};
     const defaultFonts = ${JSON.stringify(initialThemeConfig.fonts)};
 
@@ -49,9 +49,9 @@ export function LoadTheme() {
     const mode = resolvedMode;
 
     const activeThemeObjectStyles =
-      mode === "dark"
-        ? themeConfig?.themeObject.dark || defaultDarkStyles
-        : themeConfig?.themeObject.light || defaultLightStyles;
+      mode === "tinted"
+        ? themeConfig?.themeObject.tinted || defaultTintedStyles
+        : themeConfig?.themeObject.clear || defaultClearStyles;
 
     const activeRadius = themeConfig?.radius || defaultRadius;
 
