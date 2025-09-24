@@ -4,6 +4,7 @@ import {
   CustomizerSidebar,
   CustomizerSidebarToggle,
 } from "@/components/customizer/customizer-sidebar";
+import { ClearTintToggle } from "@/components/customizer/clear-tint-toggle";
 import { RandomizeButton } from "@/components/customizer/randomize-button";
 import { ExternalLink } from "@/components/external-link";
 import { GitHub } from "@/components/icons/github";
@@ -52,9 +53,10 @@ export default async function ShadcnThemesLayout({
               </div>
 
               <div className="flex items-center justify-center">
-                <TooltipWrapper label="Generate random theme" asChild>
+                {/* <TooltipWrapper label="Generate random theme" asChild>
                   <RandomizeButton />
-                </TooltipWrapper>
+                </TooltipWrapper> */}
+                <ClearTintToggle />
                 <ModeSwitcher />
                 <Button
                   asChild
