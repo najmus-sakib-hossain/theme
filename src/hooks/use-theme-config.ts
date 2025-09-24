@@ -18,30 +18,35 @@ export function useThemeConfig() {
   const [config, setConfig] = useConfig();
   const [hasLoaded, setHasLoaded] = React.useState(false);
 
+  // Migrate config if needed
+  const migratedConfig = React.useMemo(() => {
+    const newThemeObject = { ...config.themeObject };
+    if (newThemeObject.light && !newThemeObject.clear) {
+      newThemeObject.clear = newThemeObject.light;
+      delete newThemeObject.light;
+    }
+    if (newThemeObject.dark && !newThemeObject.tinted) {
+      newThemeObject.tinted = newThemeObject.dark;
+      delete newThemeObject.dark;
+    }
+    return {
+      ...config,
+      themeObject: newThemeObject,
+    };
+  }, [config]);
+
   React.useEffect(() => {
     // This prevents the theme from being set with the default values
     // since the theme config from localStorage was applied in a script in the <head>
     setHasLoaded(true);
 
-    // Migrate old light/dark to clear/tinted
-    setConfig((prev) => {
-      const newThemeObject = { ...prev.themeObject };
-      if (newThemeObject.light && !newThemeObject.clear) {
-        newThemeObject.clear = newThemeObject.light;
-        delete newThemeObject.light;
-      }
-      if (newThemeObject.dark && !newThemeObject.tinted) {
-        newThemeObject.tinted = newThemeObject.dark;
-        delete newThemeObject.dark;
-      }
-      return {
-        ...prev,
-        themeObject: newThemeObject,
-      };
-    });
-  }, []);
+    // Persist the migrated config
+    if (migratedConfig !== config) {
+      setConfig(migratedConfig);
+    }
+  }, [migratedConfig, config, setConfig]);
 
-  const currentThemeObject = config.themeObject;
+  const currentThemeObject = migratedConfig.themeObject;
   const currentSurfacePreset = config.surface;
   const currentRadius = config.radius;
   const currentFonts = config.fonts;
