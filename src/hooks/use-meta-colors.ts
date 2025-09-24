@@ -5,6 +5,8 @@ import { useTheme } from "next-themes";
 export const META_THEME_COLORS = {
   light: "#ffffff",
   dark: "#09090b",
+  tinted: "linear-gradient(to right, oklch(0.58 0.22 140) 0%, oklch(0.56 0.24 170) 100%)",
+  clear: "url('/suzume-no-tojimari.png')",
 };
 
 export function useMetaColor() {

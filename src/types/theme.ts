@@ -132,6 +132,8 @@ export type ThemeObject = {
   fonts?: Fonts;
   light: Partial<ThemeProperties>;
   dark: Partial<ThemeProperties>;
+  tinted?: Partial<ThemeProperties>;
+  clear?: Partial<ThemeProperties>;
 };
 
 export type ThemeConfig = {
