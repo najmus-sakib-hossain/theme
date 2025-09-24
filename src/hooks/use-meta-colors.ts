@@ -13,9 +13,16 @@ export function useMetaColor() {
   const { resolvedTheme } = useTheme();
 
   const metaColor = React.useMemo(() => {
-    return resolvedTheme !== "dark"
-      ? META_THEME_COLORS.light
-      : META_THEME_COLORS.dark;
+    switch (resolvedTheme) {
+      case "dark":
+        return META_THEME_COLORS.dark;
+      case "tinted":
+        return META_THEME_COLORS.tinted;
+      case "clear":
+        return META_THEME_COLORS.clear;
+      default:
+        return META_THEME_COLORS.light;
+    }
   }, [resolvedTheme]);
 
   const setMetaColor = React.useCallback((color: string) => {

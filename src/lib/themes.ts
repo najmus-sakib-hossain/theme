@@ -47,11 +47,11 @@ export const initialThemeConfig: ThemeConfig = {
   },
   themeObject: {
     ...otherPresets.dx,
-    light: {
+    clear: {
       ...otherPresets.dx.light,
       ...DEFAULT_SHADOWS,
     },
-    dark: {
+    tinted: {
       ...otherPresets.dx.dark,
       "shadow-color": DEFAULT_SHADOWS["shadow-color"],
     },
