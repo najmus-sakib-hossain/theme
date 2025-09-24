@@ -9,7 +9,7 @@ export function ClearTintToggle() {
     return (
         <TooltipWrapper label={isClear ? "Clear" : "Tinted"} asChild>
             <div
-                className="relative border h-6 w-6 rounded-full cursor-pointer"
+                className="relative border h-5 w-5 rounded-full cursor-pointer"
                 onClick={() => setIsClear(!isClear)}
             >
                 <div className="absolute top-0 left-0 h-full w-1/2 bg-background rounded-tl-full rounded-bl-full" />
