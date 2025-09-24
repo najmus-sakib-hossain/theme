@@ -3,21 +3,44 @@
 import { useEffect, useState } from "react";
 import { TooltipWrapper } from "@/components/tooltip-wrapper";
 import { Button } from "../ui/button";
+import { useThemeConfig } from "@/hooks/use-theme-config";
+import { useTheme } from "next-themes";
 
 const TINT_GRADIENT = "linear-gradient(to right, #43e97b 0%, #38f9d7 100%)";
 const THEME_IMAGE = "url('/suzume-no-tojimari.png')";
 
 export function ClearTintToggle() {
-    const [isClear, setIsClear] = useState(true);
+    const { config, setConfig, currentThemeObject } = useThemeConfig();
+    const { resolvedTheme } = useTheme();
+    const mode = (resolvedTheme ?? "light") as "light" | "dark";
+
+    const [isClear, setIsClear] = useState<boolean>(true);
 
     useEffect(() => {
-        // Update the CSS variable that `.light-background-effect` uses for its background
-        const root = document.documentElement;
-        root.style.setProperty(
-            "--gradient-background",
-            isClear ? THEME_IMAGE : TINT_GRADIENT
-        );
-    }, [isClear]);
+        // initialize from current theme config once on mount
+        const val = (currentThemeObject as any)?.[mode]?.["gradient-background"];
+        if (val !== undefined) {
+            setIsClear(String(val).startsWith("url("));
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
+        // Update the persisted theme config under the active mode (light/dark)
+        setConfig((prev) => {
+            const themeObject: any = { ...(prev.themeObject || {}) };
+
+            themeObject[mode] = { ...(themeObject[mode] || {}) };
+            themeObject[mode]["gradient-background"] = isClear
+                ? THEME_IMAGE
+                : TINT_GRADIENT;
+
+            return {
+                ...prev,
+                themeObject,
+            };
+        });
+    }, [isClear, mode, setConfig]);
 
     return (
         <TooltipWrapper label={isClear ? "Clear" : "Tinted"} asChild>
