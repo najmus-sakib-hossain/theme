@@ -43,10 +43,21 @@ export function LoadTheme() {
     let resolvedMode = localStorageMode;
 
     if (resolvedMode === "system" || resolvedMode === null) {
-      resolvedMode = prefersDark ? "dark" : "light"
+      resolvedMode = prefersDark ? "tinted" : "clear"
     }
 
-    const mode = resolvedMode;
+    // Map old light/dark to clear/tinted
+    const mode = resolvedMode === "dark" ? "tinted" : "clear";
+
+    // Migrate themeConfig if it has old structure
+    if (themeConfig?.themeObject && !themeConfig.themeObject.clear && themeConfig.themeObject.light) {
+      themeConfig.themeObject.clear = themeConfig.themeObject.light;
+      delete themeConfig.themeObject.light;
+    }
+    if (themeConfig?.themeObject && !themeConfig.themeObject.tinted && themeConfig.themeObject.dark) {
+      themeConfig.themeObject.tinted = themeConfig.themeObject.dark;
+      delete themeConfig.themeObject.dark;
+    }
 
     const activeThemeObjectStyles =
       mode === "tinted"

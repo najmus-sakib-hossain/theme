@@ -22,6 +22,23 @@ export function useThemeConfig() {
     // This prevents the theme from being set with the default values
     // since the theme config from localStorage was applied in a script in the <head>
     setHasLoaded(true);
+
+    // Migrate old light/dark to clear/tinted
+    setConfig((prev) => {
+      const newThemeObject = { ...prev.themeObject };
+      if (newThemeObject.light && !newThemeObject.clear) {
+        newThemeObject.clear = newThemeObject.light;
+        delete newThemeObject.light;
+      }
+      if (newThemeObject.dark && !newThemeObject.tinted) {
+        newThemeObject.tinted = newThemeObject.dark;
+        delete newThemeObject.dark;
+      }
+      return {
+        ...prev,
+        themeObject: newThemeObject,
+      };
+    });
   }, []);
 
   const currentThemeObject = config.themeObject;
