@@ -10,6 +10,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Providers } from "./providers";
+import { Background } from "@/components/background";
 
 export const metadata: Metadata = {
   title: {
@@ -62,6 +63,7 @@ export default async function RootLayout({
 
       <body className={cn(`antialiased`)}>
         <Providers>
+          <Background />
           <Suspense>
             {children}
             <ThemeSync />
